@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="author" content="이미영">
+  <meta name="description" content="안녕하세요. 이미영의 포트폴리오 사이트에 오신것을 환영합니다.">
+  <meta name="keywords" content="포트폴리오, 영상, html, css, js">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>이미영 포트폴리오</title>
+  
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Quicksand:wght@300;400;500;600;700&family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+ 
+
+  <style>
+    /* Portfolio detail viewer: content only */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #ffffff !important;
+    }
+
+    body.index-page {
+      padding-top: 0 !important;
+    }
+
+    #header,
+    header,
+    .page-title,
+    #footer,
+    footer,
+    #scroll-top,
+    #preloader {
+      display: none !important;
+    }
+
+    main.main {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    #portfolio-details.portfolio-details.section,
+    .portfolio-details.section {
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #ffffff !important;
+    }
+
+    #portfolio-details > .container,
+    .portfolio-details > .container,
+    #portfolio-details .container {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    #portfolio-details .row {
+      margin: 0 !important;
+      --bs-gutter-x: 0 !important;
+      --bs-gutter-y: 0 !important;
+    }
+
+    #portfolio-details [class*="col-"],
+    #portfolio-details .col-lg-12,
+    #portfolio-details .mx-auto {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .portfolio-scroll {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .portfolio-scroll img {
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .portfolio-details-slider,
+    .portfolio-details-slider .swiper-wrapper,
+    .portfolio-details-slider .swiper-slide,
+    .portfolio-details-slider .ratio {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .portfolio-details video,
+    .portfolio-details iframe {
+      width: 100% !important;
+      display: block !important;
+      border: 0 !important;
+    }
+
+    .portfolio-details .swiper-pagination {
+      margin-bottom: 0 !important;
+    }
+  
+    /* Detail pages must remain visible without AOS initialization */
+    [data-aos] {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+
+  
+    /* ===== 80% centered portfolio + close button ===== */
+    .portfolio-scroll,
+    .portfolio-details-slider {
+      width: 90% !important;
+      max-width: 90% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .portfolio-scroll img {
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+      margin: 0 auto !important;
+    }
+
+    .portfolio-details-slider video,
+    .portfolio-details-slider iframe {
+      width: 100% !important;
+      display: block !important;
+    }
+
+    .detail-close-button {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 99999;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(45, 45, 45, 0.90);
+      color: #ffffff;
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .detail-close-button:hover {
+      background: #1f1f1f;
+      transform: scale(1.06);
+    }
+
+    @media (max-width: 767.98px) {
+      .portfolio-scroll,
+      .portfolio-details-slider {
+        width: 94% !important;
+        max-width: 94% !important;
+      }
+
+      .detail-close-button {
+        right: 14px;
+        bottom: 14px;
+        width: 46px;
+        height: 46px;
+        font-size: 21px;
+      }
+    }
+
+  
+    .detail-close-button { display: none !important; }
+  </style>
+
+</head>
+
+<body class="index-page">
+<main class="main">
+<!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-12 mx-auto">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+               {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              
+
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="ratio ratio-16x9">
+                  <video controls loop playsinline>
+                    <source src="./assets/img/portfolio/ck.mp4" type="video/mp4">
+                    브라우저가 비디오 재생을 지원하지 않습니다.
+                  </video>
+
+                </div>
+
+                
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+            </div>
+          </div> -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+<!-- Scroll Top -->
+<!-- Preloader -->
+<!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
