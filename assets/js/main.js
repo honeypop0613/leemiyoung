@@ -264,18 +264,18 @@
         description: 'AI 우양산 상세페이지.',
         image: 'assets/img/portfolio/우양산메인.png',
         link: 'portfolio-details-s4.html'
+      },
+      {
+        meta: 'WEB · PUBLISHING',
+        title: 'ADEN WEBSITE',
+        description: 'ADEN카페 웹사이트',
+        image: 'assets/img/portfolio/아덴웹메인.png',
+        link: 'https://honeypop0613.github.io/aden-website/'
       }
 
     ],
 
     video: [
-      {
-        meta: 'AI VIDEO · BRAND',
-        title: 'DENY VIDEO',
-        description: 'AI 데니 애니메이션',
-        image: 'assets/img/portfolio/데니영상메인.png',
-        link: 'portfolio-details-m1.html'
-      },
       {
         meta: 'MOTION GRAPHIC · PRODUCT',
         title: 'STANLEY',
@@ -317,16 +317,37 @@
         description: '튜이드 영상 프로젝트',
         image: 'assets/img/portfolio/튜이드영상메인.png',
         link: 'portfolio-details-m7.html'
+      },
+      {
+        meta: 'VIDEO · PROMOTION',
+        title: 'BRAND FESTA',
+        description: '브랜드페스타 영상 프로젝트',
+        image: 'assets/img/portfolio/부산브랜드페스타메인.png',
+        link: 'portfolio-details-m8.html'
       }
     ],
 
-    web: [
+    team: [
       {
-        meta: 'WEB · PUBLISHING',
-        title: 'ADEN WEBSITE',
-        description: 'ADEN카페 웹사이트',
-        image: 'assets/img/portfolio/아덴웹메인.png',
-        link: 'https://honeypop0613.github.io/aden-website/'
+        meta: 'TEAM · PLANNING',
+        title: '기획',
+        description: '아덴블랑제리 센텀점 리브랜딩 기획',
+        image: 'assets/img/portfolio/기획메인.png',
+        link: 'portfolio-details-t1.html'
+      },
+      {
+        meta: 'TEAM · CARD NEWS',
+        title: '카드뉴스',
+        description: '아덴블랑제리 카드뉴스 디자인',
+        image: 'assets/img/portfolio/카드뉴스메인.png',
+        link: 'portfolio-details-t2.html'
+      },
+      {
+        meta: 'TEAM · AI VIDEO',
+        title: '데니 영상',
+        description: 'AI 데니 애니메이션',
+        image: 'assets/img/portfolio/데니영상메인.png',
+        link: 'portfolio-details-m1.html'
       }
     ]
   };
@@ -342,10 +363,10 @@
       title: 'VIDEO',
       description: '모션그래픽 · 브랜드 · 홍보영상'
     },
-    web: {
-      kicker: 'WEB · PUBLISHING',
-      title: 'WEB',
-      description: 'Web Design · HTML · CSS · JavaScript'
+    team: {
+      kicker: 'TEAM · COLLABORATION',
+      title: 'TEAM PROJECT',
+      description: '기획 · 디자인 · 영상 · 협업 프로젝트'
     }
   };
 
@@ -413,7 +434,7 @@
     } else {
       const empty = document.createElement('div');
       empty.className = 'col-12 portfolio-project-empty';
-      empty.textContent = '등록된 웹 프로젝트를 준비 중입니다.';
+      empty.textContent = category === 'team' ? '등록된 팀 프로젝트를 준비 중입니다.' : '등록된 프로젝트를 준비 중입니다.';
       portfolioProjectGrid.appendChild(empty);
     }
 
