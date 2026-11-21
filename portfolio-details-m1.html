@@ -137,8 +137,8 @@
     /* ===== 80% centered portfolio + close button ===== */
     .portfolio-scroll,
     .portfolio-details-slider {
-      width: 70% !important;
-      max-width: 70% !important;
+      width: 90% !important;
+      max-width: 90% !important;
       margin-left: auto !important;
       margin-right: auto !important;
     }
@@ -200,35 +200,21 @@
 
   
     .detail-close-button { display: none !important; }
-
-    .storyboard-pdf {
-      width: 90%;
-      max-width: 90%;
-      margin: 24px auto 0;
-      background: #ffffff;
-    }
-
-    .storyboard-pdf iframe {
-      width: 100% !important;
-      height: 100vh;
-      min-height: 900px;
-      display: block !important;
-      border: 0 !important;
-      background: #ffffff;
-    }
-
-    @media (max-width: 767.98px) {
-      .storyboard-pdf {
-        width: 94%;
-        max-width: 94%;
-      }
-
-      .storyboard-pdf iframe {
-        min-height: 75vh;
-      }
-    }
+@media (max-width: 767.98px) {
+}
 
   </style>
+
+
+<style>
+/* Video presentation unified to Centum AI 16:9 ratio */
+#portfolio-details video {
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: #000 !important;
+}
+</style>
 
 </head>
 
@@ -265,7 +251,7 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="ratio ratio-16x9">
-                  <video controls loop>
+                  <video controls autoplay muted loop playsinline preload="auto">
                     <source src="./assets/img/portfolio/데니영상2차.mp4" type="video/mp4">
                     <source src="./assets/img/portfolio/데니영상2차.mp4" type="video/ogg">
                   </video>
@@ -277,18 +263,7 @@
               <div class="swiper-pagination"></div>
             </div>
           </div>
-
-          <div class="col-lg-12 mx-auto">
-            <div class="storyboard-pdf">
-              <iframe
-                src="assets/img/portfolio/아덴블랑_77초_스토리보드.pdf#view=FitH"
-                title="아덴블랑 77초 최종 스토리보드"
-                loading="lazy">
-              </iframe>
-            </div>
-          </div>
-
-          <!-- <div class="col-lg-4">
+<!-- <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
@@ -326,6 +301,24 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('video').forEach(function (video) {
+    video.muted = true;
+    video.autoplay = true;
+    video.loop = true;
+    video.playsInline = true;
+    var tryPlay = function () {
+      var promise = video.play();
+      if (promise && typeof promise.catch === 'function') promise.catch(function () {});
+    };
+    tryPlay();
+    video.addEventListener('canplay', tryPlay, { once: true });
+  });
+});
+</script>
+
 </body>
 
 </html>

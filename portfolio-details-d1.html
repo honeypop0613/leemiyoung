@@ -212,6 +212,17 @@
 
   </style>
 
+
+<style>
+/* Video presentation unified to Centum AI 16:9 ratio */
+#portfolio-details video {
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: #000 !important;
+}
+</style>
+
 </head>
 
 <body class="index-page">
@@ -238,9 +249,7 @@
           <img src="assets/img/portfolio/매직샵10.png" alt="매직샵 포트폴리오 10">
           <img src="assets/img/portfolio/매직샵11.png" alt="매직샵 포트폴리오 11">
           <img src="assets/img/portfolio/매직샵12.png" alt="매직샵 포트폴리오 12">
-          <img src="assets/img/portfolio/매직샵13.png" alt="매직샵 포트폴리오 13">
-
-          <video controls loop playsinline preload="metadata" aria-label="매직샵 포트폴리오 영상">
+<video controls autoplay muted loop playsinline preload="auto">
             <source src="assets/img/portfolio/매직샵14.mp4" type="video/mp4">
             브라우저가 비디오 재생을 지원하지 않습니다.
           </video>
@@ -363,6 +372,24 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('video').forEach(function (video) {
+    video.muted = true;
+    video.autoplay = true;
+    video.loop = true;
+    video.playsInline = true;
+    var tryPlay = function () {
+      var promise = video.play();
+      if (promise && typeof promise.catch === 'function') promise.catch(function () {});
+    };
+    tryPlay();
+    video.addEventListener('canplay', tryPlay, { once: true });
+  });
+});
+</script>
+
 </body>
 
 </html>

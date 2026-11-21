@@ -220,6 +220,17 @@
 
   </style>
 
+
+<style>
+/* Video presentation unified to Centum AI 16:9 ratio */
+#portfolio-details video {
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: #000 !important;
+}
+</style>
+
 </head>
 
 <body class="index-page">
@@ -237,7 +248,7 @@
         <!-- 세로 스크롤형 포트폴리오 -->
         <div class="portfolio-scroll">
 
-          <video controls loop muted playsinline preload="metadata" aria-label="토리든 영상">
+          <video controls autoplay muted loop playsinline preload="auto">
             <source src="assets/img/portfolio/토리든1차_무음.mp4" type="video/mp4">
             브라우저가 비디오 재생을 지원하지 않습니다.
           </video>
@@ -346,6 +357,24 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('video').forEach(function (video) {
+    video.muted = true;
+    video.autoplay = true;
+    video.loop = true;
+    video.playsInline = true;
+    var tryPlay = function () {
+      var promise = video.play();
+      if (promise && typeof promise.catch === 'function') promise.catch(function () {});
+    };
+    tryPlay();
+    video.addEventListener('canplay', tryPlay, { once: true });
+  });
+});
+</script>
+
 </body>
 
 </html>
