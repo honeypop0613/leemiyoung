@@ -137,8 +137,8 @@
     /* ===== 80% centered portfolio + close button ===== */
     .portfolio-scroll,
     .portfolio-details-slider {
-      width: 90% !important;
-      max-width: 90% !important;
+      width: 80% !important;
+      max-width: 80% !important;
       margin-left: auto !important;
       margin-right: auto !important;
     }
@@ -198,8 +198,6 @@
       }
     }
 
-  
-    .detail-close-button { display: none !important; }
   </style>
 
 </head>
@@ -237,9 +235,9 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="ratio ratio-16x9">
-                  <video controls loop>
-                    <source src="./assets/img/portfolio/텀블러2차.mp4" type="video/mp4">
-                    <source src="./assets/img/portfolio/텀블러2차.mp4" type="video/ogg">
+                  <video controls autoplay muted loop playsinline preload="auto">
+                    <source src="./assets/img/portfolio/스탠리.mp4" type="video/mp4">
+                    <source src="./assets/img/portfolio/스탠리.mp4" type="video/ogg">
                   </video>
 
                 </div>
@@ -288,6 +286,53 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <button type="button" class="detail-close-button" id="detail-close-button" aria-label="상세 포트폴리오 닫기">
+    <i class="bi bi-x-lg"></i>
+  </button>
+
+
+  <script>
+    (function () {
+      const closeBtn = document.getElementById('detail-close-button');
+      if (!closeBtn) return;
+
+      closeBtn.addEventListener('click', function () {
+        try {
+          if (window.parent && window.parent !== window) {
+            const parentDoc = window.parent.document;
+            const viewer = parentDoc.querySelector('#portfolio-detail-viewer');
+            const frame = parentDoc.querySelector('#portfolio-detail-frame');
+
+            if (viewer) {
+              viewer.classList.remove('is-open');
+              viewer.setAttribute('aria-hidden', 'true');
+            }
+
+            if (parentDoc.body) {
+              parentDoc.body.classList.remove('portfolio-detail-open');
+            }
+
+            if (frame) {
+              frame.src = 'about:blank';
+            }
+
+            return;
+          }
+        } catch (e) {
+          // Fallback below when cross-window access is unavailable.
+        }
+
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.close();
+        }
+      });
+    })();
+  </script>
+
 </body>
 
 </html>

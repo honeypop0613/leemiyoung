@@ -150,6 +150,29 @@
       margin: 0 auto !important;
     }
 
+    /* Beglow fact first-image ratio lock for Torriden 3 detail images */
+    .detail-image-frame {
+      width: 140% !important;
+      max-width: 140% !important;
+      aspect-ratio: 1920 / 1081 !important;
+      overflow: hidden !important;
+      background: #ffffff !important;
+      display: block !important;
+      margin-left: -20% !important;
+      margin-right: -20% !important;
+      padding: 0 !important;
+    }
+
+    .detail-image-frame img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      display: block !important;
+      margin: 0 auto !important;
+      background: #ffffff !important;
+    }
+
     .portfolio-details-slider video,
     .portfolio-details-slider iframe {
       width: 100% !important;
@@ -203,6 +226,13 @@
         margin-left: 0 !important;
         margin-right: 0 !important;
       }
+
+      .detail-image-frame {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
     }
 
   
@@ -219,6 +249,17 @@
     }
 
   </style>
+
+
+<style>
+/* Video presentation unified to Centum AI 16:9 ratio */
+#portfolio-details video {
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: #000 !important;
+}
+</style>
 
 </head>
 
@@ -237,21 +278,19 @@
         <!-- 세로 스크롤형 포트폴리오 -->
         <div class="portfolio-scroll">
 
-          <video controls loop muted playsinline preload="metadata" aria-label="토리든 영상">
+          <video controls autoplay muted loop playsinline preload="auto">
             <source src="assets/img/portfolio/토리든1차_무음.mp4" type="video/mp4">
             브라우저가 비디오 재생을 지원하지 않습니다.
           </video>
-
-          <img src="assets/img/portfolio/1.png" alt="">
-          <img src="assets/img/portfolio/2.png" alt="">
-          <img src="assets/img/portfolio/3.png" alt="">
-          <img src="assets/img/portfolio/4.png" alt="">
-          <img src="assets/img/portfolio/5.png" alt="">
-          <img src="assets/img/portfolio/6.png" alt="">
-          <img src="assets/img/portfolio/7.png" alt="">
-          <img src="assets/img/portfolio/8.png" alt="">
-          <img src="assets/img/portfolio/9.png" alt="">
-          <img src="assets/img/portfolio/10.png" alt="">
+          <div class="detail-image-frame">
+            <img src="assets/img/portfolio/상세-토리든1.png" alt="토리든 포트폴리오 상세 이미지 1">
+          </div>
+          <div class="detail-image-frame">
+            <img src="assets/img/portfolio/상세-토리든2.png" alt="토리든 포트폴리오 상세 이미지 2" loading="lazy">
+          </div>
+          <div class="detail-image-frame">
+            <img src="assets/img/portfolio/상세-토리든3.png" alt="토리든 포트폴리오 상세 이미지 3" loading="lazy">
+          </div>
           
 
         </div>
@@ -346,6 +385,24 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('video').forEach(function (video) {
+    video.muted = true;
+    video.autoplay = true;
+    video.loop = true;
+    video.playsInline = true;
+    var tryPlay = function () {
+      var promise = video.play();
+      if (promise && typeof promise.catch === 'function') promise.catch(function () {});
+    };
+    tryPlay();
+    video.addEventListener('canplay', tryPlay, { once: true });
+  });
+});
+</script>
+
 </body>
 
 </html>

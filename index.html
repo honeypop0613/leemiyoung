@@ -407,6 +407,159 @@
     }
 </style>
 
+
+  <style id="purple-accent-unified">
+    /* ===== Unified lavender-purple accent ===== */
+    :root { --portfolio-purple: #7657bd; --portfolio-purple-dark: #6849ad; }
+
+    /* Active / hover navigation */
+    @media (min-width: 1200px) {
+      #header .navmenu li:hover > a,
+      #header .navmenu .active,
+      #header .navmenu .active:focus,
+      .scrolled #header .navmenu li:hover > a,
+      .scrolled #header .navmenu .active,
+      .scrolled #header .navmenu .active:focus {
+        color: var(--portfolio-purple) !important;
+      }
+    }
+
+    /* Contact icons */
+    #contact .info-item i,
+    .contact .info-item i {
+      color: var(--portfolio-purple) !important;
+    }
+
+    /* Contact form buttons */
+    #contact .php-email-form button[type=submit],
+    #contact .php-email-form button[type=reset],
+    .contact .php-email-form button[type=submit],
+    .contact .php-email-form button[type=reset] {
+      background: var(--portfolio-purple) !important;
+      color: #fff !important;
+      border: 1px solid var(--portfolio-purple) !important;
+    }
+    #contact .php-email-form button[type=submit]:hover,
+    #contact .php-email-form button[type=reset]:hover,
+    .contact .php-email-form button[type=submit]:hover,
+    .contact .php-email-form button[type=reset]:hover {
+      background: var(--portfolio-purple-dark) !important;
+      border-color: var(--portfolio-purple-dark) !important;
+    }
+    #contact .php-email-form button[type=submit]:active,
+    #contact .php-email-form button[type=reset]:active,
+    .contact .php-email-form button[type=submit]:active,
+    .contact .php-email-form button[type=reset]:active {
+      background: #fff !important;
+      color: var(--portfolio-purple) !important;
+      border-color: var(--portfolio-purple) !important;
+    }
+
+    /* About / Resume timeline */
+    #resume .resume-item,
+    .resume .resume-item {
+      border-left-color: var(--portfolio-purple) !important;
+    }
+    #resume .resume-item::before,
+    .resume .resume-item::before {
+      border-color: var(--portfolio-purple) !important;
+    }
+
+    /* Scroll-to-top */
+    #scroll-top.scroll-top,
+    .scroll-top {
+      background: var(--portfolio-purple) !important;
+      color: #fff !important;
+    }
+    #scroll-top.scroll-top i,
+    .scroll-top i { color: #fff !important; }
+    #scroll-top.scroll-top:hover,
+    .scroll-top:hover {
+      background: var(--portfolio-purple-dark) !important;
+    }
+    #scroll-top.scroll-top:active,
+    .scroll-top:active {
+      background: #fff !important;
+      color: var(--portfolio-purple) !important;
+      box-shadow: inset 0 0 0 1px var(--portfolio-purple);
+    }
+    #scroll-top.scroll-top:active i,
+    .scroll-top:active i { color: var(--portfolio-purple) !important; }
+
+    /* Selected Projects controls — keep the same purple system */
+    #featured-projects .featured-top-action {
+      background: var(--portfolio-purple) !important;
+      border-color: var(--portfolio-purple) !important;
+      color: #fff !important;
+      box-shadow: 0 12px 30px rgba(118,87,189,.24) !important;
+    }
+    #featured-projects .featured-top-action:hover,
+    #featured-projects .featured-top-action:focus-visible {
+      background: var(--portfolio-purple-dark) !important;
+      border-color: var(--portfolio-purple-dark) !important;
+      color: #fff !important;
+    }
+    #featured-projects .featured-top-action:active {
+      background: #fff !important;
+      color: var(--portfolio-purple) !important;
+      border-color: var(--portfolio-purple) !important;
+    }
+    #featured-projects .featured-3d-arrow {
+      background: var(--portfolio-purple) !important;
+      border-color: var(--portfolio-purple) !important;
+      color: #fff !important;
+    }
+    #featured-projects .featured-3d-arrow:hover,
+    #featured-projects .featured-3d-arrow:focus-visible {
+      background: var(--portfolio-purple-dark) !important;
+      border-color: var(--portfolio-purple-dark) !important;
+      color: #fff !important;
+    }
+    #featured-projects .featured-3d-arrow:active {
+      background: #fff !important;
+      color: var(--portfolio-purple) !important;
+      border-color: var(--portfolio-purple) !important;
+    }
+
+    /* Selected Projects spacing refinement */
+    #featured-projects.featured-projects-3d {
+      padding-top: 46px !important;
+    }
+
+    #featured-projects.featured-projects-3d .featured-projects-topbar {
+      margin-bottom: 18px !important;
+    }
+
+    /* Scroll-to-top: separate it from the primary purple action buttons */
+    #scroll-top.scroll-top,
+    .scroll-top {
+      background: #ffffff !important;
+      color: var(--portfolio-purple) !important;
+      border: 1px solid rgba(118, 87, 189, .48) !important;
+      box-shadow: 0 8px 24px rgba(75, 57, 111, .12) !important;
+    }
+    #scroll-top.scroll-top i,
+    .scroll-top i {
+      color: var(--portfolio-purple) !important;
+    }
+    #scroll-top.scroll-top:hover,
+    .scroll-top:hover {
+      background: #f7f3ff !important;
+      color: var(--portfolio-purple-dark) !important;
+      border-color: var(--portfolio-purple) !important;
+    }
+    #scroll-top.scroll-top:hover i,
+    .scroll-top:hover i {
+      color: var(--portfolio-purple-dark) !important;
+    }
+    #scroll-top.scroll-top:active,
+    .scroll-top:active {
+      background: #ffffff !important;
+      color: var(--portfolio-purple-dark) !important;
+      transform: scale(.96);
+    }
+  </style>
+
 </head>
 
 <body class="index-page">
@@ -422,9 +575,8 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
           <!-- <li><a href="#services">Services</a></li> -->
-          <li><a href="#portfolio" id="portfolio-nav-home">Portfolio</a></li>
+          <li><a href="#featured-projects">Portfolio</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
@@ -461,17 +613,25 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/대문1.png" alt="" data-aos="fade-in">
-
-      <div class="container text-center hero-copy">
-        <h2 class="hero-name">Lee Mi Young</h2>
-        <p class="hero-role">Visual Designer &amp; Content Creator</p>
-        <p class="hero-fields">Graphic · Branding · Web · AI Visual &amp; Video</p>
-        <a href="#portfolio" class="hero-portfolio-btn" title="포트폴리오 바로가기">PORTFOLIO VIEW</a>
+    <section id="hero" class="hero section portfolio-hero silver-lavender-hero">
+      <div class="hero-wave-field" aria-hidden="true">
+        <span class="hero-wave wave-a"></span>
+        <span class="hero-wave wave-b"></span>
+        <span class="hero-wave wave-c"></span>
+        <span class="hero-wave wave-d"></span>
+        <span class="hero-wave wave-e"></span>
       </div>
-
+      <div class="hero-glint hero-glint-one" aria-hidden="true"></div>
+      <div class="hero-glint hero-glint-two" aria-hidden="true"></div>
+      <div class="hero-light hero-light-one" aria-hidden="true"></div>
+      <div class="hero-light hero-light-two" aria-hidden="true"></div>
+      <div class="container text-center hero-copy">
+        <span class="hero-eyebrow">PORTFOLIO · 2026</span>
+        <h2 class="hero-name" data-text="LEE MI YOUNG">LEE MI YOUNG</h2>
+        <p class="hero-role">Visual Designer &amp; Content Creator</p>
+        <p class="hero-fields">Graphic / Branding / Motion / Web Design / AI</p>
+        <a href="#featured-projects" class="hero-portfolio-btn" title="대표 프로젝트 보기">VIEW PROJECTS <span aria-hidden="true">→</span></a>
+      </div>
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
@@ -522,98 +682,117 @@
 
       </div>
 
+      <!-- Resume content included in About -->
+      <div class="about-resume resume" data-aos="fade-up" data-aos-delay="120">
+        <div class="container section-title about-resume-title">
+          <span class="description-title">My Resume</span>
+          <h2>My Resume</h2>
+        </div>
+
+        <div class="container">
+          <div class="row mb-4">
+            <div class="col-12">
+              <h3 class="resume-title">Summary</h3>
+              <div class="resume-item pb-0">
+                <p>다양한 현장에서 쌓은 운영·교육·소통 경험을 바탕으로, 디자인과 콘텐츠 제작 분야로 새로운 커리어를 확장하고 있습니다.</p>
+                <p>사용자와 목적을 이해하고, 실무에 활용할 수 있는 결과물을 만드는 것을 중요하게 생각합니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>신라대학교 행정학과</h4>
+                <h5>2002.03 – 2006.02</h5>
+                <p>행정학과 졸업</p>
+              </div>
+              <div class="resume-item">
+                <h4>센텀직업전문학교</h4>
+                <h5>2026.04 – 2026.10</h5>
+                <p><em>디자인 관련 교육과정 이수</em></p>
+                <ul>
+                  <li>그래픽·웹디자인 및 이미지 편집</li>
+                  <li>AI 이미지·영상 콘텐츠 제작</li>
+                  <li>포트폴리오 프로젝트 진행</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /Resume content included in About -->
+
     </section><!-- /About Section -->
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">My Resume</span>
-        <h2>My Resume</h2>
-        <p></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row mb-4">
-          <div class="col-12" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Summary</h3>
-
-            <div class="resume-item pb-0">
-              <p>
-                다양한 현장에서 쌓은 운영·교육·소통 경험을 바탕으로,
-                디자인과 콘텐츠 제작 분야로 새로운 커리어를 확장하고 있습니다.
-              </p>
-              <p>
-                사용자와 목적을 이해하고, 실무에 활용할 수 있는 결과물을 만드는 것을 중요하게 생각합니다.
-              </p>
-            </div><!-- End Resume Item -->
+    <!-- Featured Projects -->
+    <section id="featured-projects" class="featured-projects featured-projects-3d section">
+      <div class="container featured-projects-inner">
+        <div class="featured-projects-topbar">
+          <div class="featured-projects-head">
+            <h2>SELECTED PROJECTS</h2>
+            <p>디자인 · 웹디자인 · 영상 대표 작업을 한눈에 볼 수 있습니다.</p>
           </div>
+          <a href="#portfolio" id="featured-more-projects" class="featured-top-action" aria-label="다른 작품 더 보기">
+            <span>다른 작품 더 보기</span><i class="bi bi-arrow-right"></i>
+          </a>
         </div>
 
-        <div class="row">
+        <div class="featured-3d-shell" aria-label="대표 프로젝트 3D 캐러셀">
+          <button class="featured-3d-arrow featured-3d-prev" type="button" aria-label="이전 프로젝트">
+            <i class="bi bi-chevron-left"></i>
+          </button>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <h3 class="resume-title">Education</h3>
-
-            <div class="resume-item">
-              <h4>신라대학교 행정학과</h4>
-              <h5>2002.03 – 2006.02</h5>
-              <p>행정학과 졸업</p>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>센텀직업전문학교</h4>
-              <h5>2026.04 – 2026.10</h5>
-              <p><em>디자인 관련 교육과정 이수</em></p>
-              <ul>
-                <li>그래픽·웹디자인 및 이미지 편집</li>
-                <li>AI 이미지·영상 콘텐츠 제작</li>
-                <li>포트폴리오 프로젝트 진행</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
+          <div class="featured-3d-stage" id="featured-3d-stage">
+            <a class="featured-3d-card" data-index="0" href="https://honeypop0613.github.io/aden-website/" target="_blank" rel="noopener noreferrer" aria-label="ADEN BLANC WEB 열기">
+              <img src="assets/img/portfolio/selected-3d/01-aden-web.png" alt="ADEN BLANC WEB">
+              <span class="featured-3d-caption"><small>WEB DESIGN</small><strong>ADEN BLANC WEB</strong></span>
+            </a>
+            <a class="featured-3d-card" data-index="1" href="portfolio-details-s3.html" target="_blank" rel="noopener noreferrer" aria-label="TORRIDEN 프로젝트 열기">
+              <img src="assets/img/portfolio/selected-3d/02-torriden.png" alt="TORRIDEN">
+              <span class="featured-3d-caption"><small>DESIGN</small><strong>TORRIDEN</strong></span>
+            </a>
+            <a class="featured-3d-card" data-index="2" href="portfolio-details-m4.html" target="_blank" rel="noopener noreferrer" aria-label="센텀 홍보영상 열기">
+              <img src="assets/img/portfolio/selected-3d/03-centum.png" alt="센텀 홍보영상">
+              <span class="featured-3d-caption"><small>VIDEO</small><strong>센텀 홍보영상</strong></span>
+              <span class="featured-3d-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+            </a>
+            <a class="featured-3d-card" data-index="3" href="portfolio-details-m6.html" target="_blank" rel="noopener noreferrer" aria-label="CK 정국영상 열기">
+              <img src="assets/img/portfolio/selected-3d/04-ck.png" alt="CK 정국영상">
+              <span class="featured-3d-caption"><small>VIDEO</small><strong>CK 정국영상</strong></span>
+              <span class="featured-3d-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+            </a>
+            <a class="featured-3d-card" data-index="4" href="portfolio-details-m1.html" target="_blank" rel="noopener noreferrer" aria-label="DENNY VIDEO 열기">
+              <img src="assets/img/portfolio/selected-3d/05-denny.png" alt="DENNY VIDEO">
+              <span class="featured-3d-caption"><small>VIDEO</small><strong>DENNY VIDEO</strong></span>
+              <span class="featured-3d-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+            </a>
+            <a class="featured-3d-card" data-index="5" href="portfolio-details-d1.html" target="_blank" rel="noopener noreferrer" aria-label="MAGIC SHOP 프로젝트 열기">
+              <img src="assets/img/portfolio/selected-3d/06-magic.png" alt="MAGIC SHOP">
+              <span class="featured-3d-caption"><small>DESIGN</small><strong>MAGIC SHOP</strong></span>
+            </a>
+            <a class="featured-3d-card" data-index="6" href="portfolio-details-d3.html" target="_blank" rel="noopener noreferrer" aria-label="YEONDONGI 연동이 프로젝트 열기">
+              <img src="assets/img/portfolio/연동이메인.png" alt="YEONDONGI 연동이 캐릭터 디자인">
+              <span class="featured-3d-caption"><small>DESIGN</small><strong>YEONDONGI</strong></span>
+            </a>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-
-            <h3 class="resume-title">Professional Experience</h3>
-
-            <div class="resume-item">
-              <h4>파아란 어린이집</h4>
-              <h5>2017.03 – 2026.02</h5>
-              <p><em>주임 및 보육교사</em></p>
-              <ul>
-                <li>교육 프로그램 운영 및 학부모 상담</li>
-                <li>교사 업무 조율 및 행사 기획</li>
-                <li>교육자료·안내 콘텐츠 제작</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>CJ푸드빌 VIPS</h4>
-              <h5>2005.10 – 2016.09</h5>
-              <p><em>점장 및 플로어 매니저</em></p>
-              <ul>
-                <li>매장 운영 및 고객 서비스 관리</li>
-                <li>직원 교육·스케줄 및 매출 관리</li>
-                <li>프로모션 및 행사 운영</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-          </div>
-
+          <button class="featured-3d-arrow featured-3d-next" type="button" aria-label="다음 프로젝트">
+            <i class="bi bi-chevron-right"></i>
+          </button>
         </div>
 
+        <div class="featured-3d-dots" aria-label="프로젝트 선택">
+          <button type="button" data-slide="0" aria-label="ADEN BLANC WEB"></button>
+          <button type="button" data-slide="1" aria-label="TORRIDEN"></button>
+          <button type="button" data-slide="2" aria-label="센텀 홍보영상"></button>
+          <button type="button" data-slide="3" aria-label="CK 정국영상"></button>
+          <button type="button" data-slide="4" aria-label="DENNY VIDEO"></button>
+          <button type="button" data-slide="5" aria-label="MAGIC SHOP"></button>
+          <button type="button" data-slide="6" aria-label="YEONDONGI 연동이"></button>
+        </div>
       </div>
-
-    </section><!-- /Resume Section -->
-
-    
-
-   
+    </section><!-- /Featured Projects -->
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
@@ -624,7 +803,7 @@
         <h2><a href="#portfolio" id="portfolio-title-home" style="color: inherit; text-decoration: none;">Portfolio</a></h2>
       </div><!-- End Section Title -->
 
-      <!-- CATEGORY HOME: 기존 첫 화면 유지 -->
+      <!-- CATEGORY HOME -->
       <div id="portfolio-category-home" class="container portfolio-category-wrap" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row g-4 portfolio-category-grid">
@@ -632,9 +811,9 @@
           <!-- DESIGN -->
           <div class="col-lg-4 col-md-6 portfolio-category-item" data-category="design">
             <div class="portfolio-card-heading">
-              <span class="portfolio-card-kicker portfolio-card-kicker-dark">GRAPHIC · DETAIL PAGE</span>
+              <span class="portfolio-card-kicker portfolio-card-kicker-dark">GRAPHIC · BRANDING · DETAIL PAGE</span>
               <strong class="portfolio-card-title portfolio-card-title-dark">DESIGN</strong>
-              <span class="portfolio-card-desc portfolio-card-desc-dark">상세페이지 · 브랜딩 · 그래픽 작업</span>
+              <span class="portfolio-card-desc portfolio-card-desc-dark">브랜딩 · 그래픽 · 상세페이지 작업</span>
             </div>
             <button
               type="button"
@@ -650,9 +829,9 @@
           <!-- VIDEO -->
           <div class="col-lg-4 col-md-6 portfolio-category-item" data-category="video">
             <div class="portfolio-card-heading">
-              <span class="portfolio-card-kicker portfolio-card-kicker-dark">VIDEO · MOTION</span>
+              <span class="portfolio-card-kicker portfolio-card-kicker-dark">VIDEO · MOTION · AI</span>
               <strong class="portfolio-card-title portfolio-card-title-dark">VIDEO</strong>
-              <span class="portfolio-card-desc portfolio-card-desc-dark">모션그래픽 · 브랜드 · 홍보영상</span>
+              <span class="portfolio-card-desc portfolio-card-desc-dark">AI · 모션그래픽 · 브랜드 · 홍보영상</span>
             </div>
             <button
               type="button"
@@ -665,23 +844,23 @@
             </button>
           </div><!-- /VIDEO -->
 
-          <!-- TEAM PROJECT -->
-          <div class="col-lg-4 col-md-6 portfolio-category-item" data-category="team">
+          <!-- WEB DESIGN -->
+          <div class="col-lg-4 col-md-6 portfolio-category-item" data-category="web">
             <div class="portfolio-card-heading">
-              <span class="portfolio-card-kicker portfolio-card-kicker-dark">TEAM · COLLABORATION</span>
-              <strong class="portfolio-card-title portfolio-card-title-dark">TEAM PROJECT</strong>
-              <span class="portfolio-card-desc portfolio-card-desc-dark">기획 · 디자인 · 영상 · 협업 프로젝트</span>
+              <span class="portfolio-card-kicker portfolio-card-kicker-dark">WEB · PUBLISHING</span>
+              <strong class="portfolio-card-title portfolio-card-title-dark">WEB DESIGN</strong>
+              <span class="portfolio-card-desc portfolio-card-desc-dark">웹디자인 · 퍼블리싱 작업</span>
             </div>
             <button
               type="button"
               class="portfolio-category-card portfolio-category-enter"
-              data-portfolio-category="team"
-              aria-label="팀 프로젝트 포트폴리오 전체 보기"
+              data-portfolio-category="web"
+              aria-label="웹디자인 포트폴리오 전체 보기"
             >
-              <img src="assets/img/portfolio/웹사이트메인.png" alt="팀 프로젝트 포트폴리오 대표 이미지">
+              <img src="assets/img/portfolio/웹사이트메인.png" alt="웹디자인 포트폴리오 대표 이미지">
               <span class="portfolio-card-overlay"></span>
             </button>
-          </div><!-- /TEAM PROJECT -->
+          </div><!-- /WEB DESIGN -->
 
         </div>
       </div><!-- /CATEGORY HOME -->

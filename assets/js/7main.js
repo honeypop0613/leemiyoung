@@ -208,84 +208,155 @@
   const portfolioProjects = {
     design: [
       {
-        meta: 'GRAPHIC · DETAIL PAGE',
+        meta: 'TEAM PROJECT · REBRANDING',
+        title: 'PROJECT TEAM',
+        description: '아덴블랑제리 센텀 리브랜딩 팀프로젝트',
+        image: 'assets/img/portfolio/team/cardnews/팀프로젝트대문.png',
+        link: 'portfolio-details-t2.html'
+      },
+      {
+        meta: 'GRAPHIC · CHARACTER',
         title: 'MAGIC SHOP',
-        description: '그래픽 디자인과 비주얼 편집을 중심으로 구성한 디자인 프로젝트입니다.',
+        description: '매직샵 캐릭터 디자인',
         image: 'assets/img/portfolio/매직샵메.png',
         link: 'portfolio-details-d1.html'
       },
       {
-        meta: 'GRAPHIC · POSTER',
-        title: 'POSTER DESIGN',
-        description: '포스터 레이아웃과 타이포그래피를 활용해 메시지를 시각적으로 정리한 그래픽 작업입니다.',
-        image: 'assets/img/portfolio/포스터메인.png',
-        link: 'portfolio-details-d2.html'
-      },
-      {
         meta: 'CHARACTER · GRAPHIC',
         title: 'YEONDONGI',
-        description: '캐릭터 콘셉트와 비주얼 아이덴티티를 중심으로 전개한 디자인 프로젝트입니다.',
+        description: '연동이 캐릭터 디자인',
         image: 'assets/img/portfolio/연동이메인.png',
         link: 'portfolio-details-d3.html'
       },
       {
+        meta: 'AI · DETAIL PAGE',
+        title: 'TORRIDEN DETAIL PAGE',
+        description: 'AI 토리든 상세페이지',
+        image: 'assets/img/portfolio/토리든메인.png',
+        link: 'portfolio-details-s3.html'
+      },
+      {
+        meta: 'BRANDING',
+        title: 'ADEN BLANC REBRANDING',
+        description: 'AI 아덴 리브랜딩 페이지',
+        image: 'assets/img/portfolio/리브랜딩메인.png',
+        link: 'portfolio-details-r1.html'
+      },
+      {
         meta: 'DETAIL PAGE',
         title: 'BE GLOW',
-        description: '제품의 특징과 구매 포인트가 자연스럽게 전달되도록 구성한 상세페이지 디자인입니다.',
-        image: 'assets/img/portfolio/비글로우메.png',
+        description: '파우더팩트 상세페이지',
+        image: 'assets/img/portfolio/비글로우메인.png',
         link: 'portfolio-details-s1.html'
+      },
+      {
+        meta: 'GRAPHIC · POSTER',
+        title: 'POSTER DESIGN',
+        description: '청년이있어 포스터',
+        image: 'assets/img/portfolio/포스터메인.png',
+        link: 'portfolio-details-d2.html'
+      },
+      {
+        meta: 'AI · DETAIL PAGE',
+        title: 'UV UMBRELLA DETAIL PAGE',
+        description: 'AI 우양산 상세페이지',
+        image: 'assets/img/portfolio/우양산메인.png',
+        link: 'portfolio-details-s4.html'
       },
       {
         meta: 'DETAIL PAGE',
         title: 'CK DETAIL PAGE',
-        description: '상품 이미지와 정보 구조를 정리해 시각적 흐름을 강화한 상세페이지 작업입니다.',
-        image: 'assets/img/portfolio/ck메인.JPG',
+        description: 'CK 상세페이지',
+        image: 'assets/img/portfolio/ck메인.png',
         link: 'portfolio-details-s2.html'
-      },
-      {
-        meta: 'BRANDING',
-        title: 'REBRANDING',
-        description: '브랜드의 방향성과 비주얼 요소를 재정리한 리브랜딩 프로젝트입니다.',
-        image: 'assets/img/portfolio/리브랜딩메인.png',
-        link: 'portfolio-details-r1.html'
       }
     ],
 
     video: [
       {
-        meta: 'AI VIDEO · BRAND',
+        meta: 'AI VIDEO · CHARACTER',
         title: 'DENY VIDEO',
-        description: '브랜드 캐릭터와 스토리를 활용해 제작한 AI 기반 브랜드 영상 프로젝트입니다.',
+        description: 'AI 데니 애니메이션',
         image: 'assets/img/portfolio/데니영상메인.png',
         link: 'portfolio-details-m1.html'
       },
       {
+        meta: 'AI VIDEO · PROMOTION',
+        title: 'CENTUM AI VIDEO',
+        description: 'AI 센텀직업전문학교 홍보영상',
+        image: 'assets/img/portfolio/센텀ai메인.png',
+        link: 'portfolio-details-m4.html'
+      },
+      {
         meta: 'MOTION GRAPHIC · PRODUCT',
         title: 'STANLEY',
-        description: '제품 컬러와 기능을 리드미컬하게 보여주는 모션그래픽 광고 프로젝트입니다.',
+        description: 'AI 스탠리 모션그래픽',
         image: 'assets/img/portfolio/스탠리메인.png',
         link: 'portfolio-details-m2.html'
+      },
+      {
+        meta: 'VIDEO · MOTION',
+        title: 'CK VIDEO',
+        description: 'CK 영상 프로젝트',
+        image: 'assets/img/portfolio/ck영상메인.png',
+        link: 'portfolio-details-m6.html'
+      },
+      {
+        meta: 'VIDEO · MOTION',
+        title: '튜이드 VIDEO',
+        description: '튜이드 영상 프로젝트',
+        image: 'assets/img/portfolio/튜이드영상메인.png',
+        link: 'portfolio-details-m7.html'
+      },
+      {
+        meta: 'PROMOTION VIDEO',
+        title: 'CENTUM VIDEO',
+        description: '센텀직업전문학교 홍보영상',
+        image: 'assets/img/portfolio/센텀메인.png',
+        link: 'portfolio-details-m5.html'
+      },
+      {
+        meta: 'BRAND VIDEO',
+        title: 'ADEN BLANC',
+        description: '아덴블랑제리 브랜드 영상',
+        image: 'assets/img/portfolio/아덴블랑메인.png',
+        link: 'portfolio-details-m3.html'
+      },
+      {
+        meta: 'VIDEO · PROMOTION',
+        title: 'BRAND FESTA',
+        description: '브랜드페스타 영상 프로젝트',
+        image: 'assets/img/portfolio/부산브랜드페스타메인.png',
+        link: 'portfolio-details-m8.html'
       }
     ],
 
-    web: []
+    web: [
+      {
+        meta: 'WEB · PUBLISHING',
+        title: 'ADEN WEBSITE',
+        description: 'ADEN 카페 웹사이트',
+        image: 'assets/img/portfolio/아덴웹메인.png',
+        link: 'https://honeypop0613.github.io/aden-website/'
+      }
+    ]
   };
 
   const portfolioCategoryInfo = {
     design: {
-      kicker: 'GRAPHIC · DETAIL PAGE · BRANDING',
+      kicker: 'GRAPHIC · BRANDING · DETAIL PAGE',
       title: 'DESIGN',
-      description: '상세페이지 · 브랜딩 · 그래픽 작업'
+      description: '브랜딩 · 그래픽 · 상세페이지 작업'
     },
     video: {
-      kicker: 'VIDEO · MOTION',
+      kicker: 'VIDEO · MOTION · AI',
       title: 'VIDEO',
-      description: '모션그래픽 · 브랜드 · 홍보영상'
+      description: 'AI · 모션그래픽 · 브랜드 · 홍보영상'
     },
     web: {
       kicker: 'WEB · PUBLISHING',
-      title: 'WEB',
-      description: 'Web Design · HTML · CSS · JavaScript'
+      title: 'WEB DESIGN',
+      description: '웹디자인 · 퍼블리싱 작업'
     }
   };
 
@@ -308,9 +379,13 @@
     card.target = '_blank';
     card.rel = 'noopener noreferrer';
 
+    const mediaMarkup = project.video
+      ? `<video src="${project.video}" muted playsinline preload="metadata" aria-label="${project.title} 영상 미리보기"></video>`
+      : `<img src="${project.image}" alt="${project.title} 프로젝트 대표 이미지">`;
+
     card.innerHTML = `
       <div class="portfolio-project-thumb">
-        <img src="${project.image}" alt="${project.title} 프로젝트 대표 이미지">
+        ${mediaMarkup}
       </div>
       <div class="portfolio-project-copy">
         <span class="portfolio-project-meta">${project.meta}</span>
@@ -318,6 +393,13 @@
         <p class="portfolio-project-description">${project.description}</p>
       </div>
     `;
+
+    const previewVideo = card.querySelector('video');
+    if (previewVideo) {
+      previewVideo.addEventListener('loadedmetadata', () => {
+        try { previewVideo.currentTime = Math.min(0.2, previewVideo.duration || 0.2); } catch (e) {}
+      }, { once: true });
+    }
 
     col.appendChild(card);
     return col;
@@ -342,7 +424,7 @@
     } else {
       const empty = document.createElement('div');
       empty.className = 'col-12 portfolio-project-empty';
-      empty.textContent = '등록된 웹 프로젝트를 준비 중입니다.';
+      empty.textContent = '등록된 프로젝트를 준비 중입니다.';
       portfolioProjectGrid.appendChild(empty);
     }
 
@@ -382,4 +464,171 @@
   }
 
 
+
+  /**
+   * Portfolio nav/title -> category home
+   */
+  const portfolioNavHome = document.querySelector('#portfolio-nav-home');
+  const portfolioTitleHome = document.querySelector('#portfolio-title-home');
+
+  function goToPortfolioCategoryHome(event) {
+    if (event) event.preventDefault();
+
+    if (portfolioProjectView && portfolioCategoryHome) {
+      portfolioProjectView.hidden = true;
+      portfolioCategoryHome.hidden = false;
+    }
+
+    const portfolioSection = document.querySelector('#portfolio');
+    if (portfolioSection) {
+      const headerHeight =
+        parseInt(
+          getComputedStyle(document.documentElement)
+            .getPropertyValue('--fixed-header-height')
+        ) || 78;
+
+      const targetTop =
+        portfolioSection.getBoundingClientRect().top +
+        window.scrollY -
+        headerHeight;
+
+      window.scrollTo({
+        top: targetTop,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  if (portfolioNavHome) {
+    portfolioNavHome.addEventListener('click', goToPortfolioCategoryHome);
+  }
+
+  if (portfolioTitleHome) {
+    portfolioTitleHome.addEventListener('click', goToPortfolioCategoryHome);
+  }
+
+  const featuredMoreProjects = document.querySelector('#featured-more-projects');
+  if (featuredMoreProjects) {
+    featuredMoreProjects.addEventListener('click', goToPortfolioCategoryHome);
+  }
+
+})();
+// Selected Projects: 3D cover-flow carousel
+(() => {
+  const stage = document.getElementById('featured-3d-stage');
+  if (!stage) return;
+
+  const cards = Array.from(stage.querySelectorAll('.featured-3d-card'));
+  const prev = document.querySelector('.featured-3d-prev');
+  const next = document.querySelector('.featured-3d-next');
+  const dots = Array.from(document.querySelectorAll('.featured-3d-dots button'));
+  let active = 0;
+  let touchStartX = 0;
+
+  const normalize = (n) => (n + cards.length) % cards.length;
+
+  function signedOffset(i) {
+    let d = i - active;
+    const half = cards.length / 2;
+    if (d > half) d -= cards.length;
+    if (d < -half) d += cards.length;
+    return d;
+  }
+
+  function render() {
+    const mobile = window.matchMedia('(max-width: 575.98px)').matches;
+    const tablet = window.matchMedia('(max-width: 991.98px)').matches;
+    const step = mobile ? 150 : tablet ? 230 : 330;
+
+    cards.forEach((card, i) => {
+      const d = signedOffset(i);
+      const abs = Math.abs(d);
+      const visible = abs <= 2;
+      const tx = d * step;
+      const tz = abs === 0 ? 110 : abs === 1 ? -90 : -230;
+      const ry = d === 0 ? 0 : d > 0 ? -46 : 46;
+      const scale = abs === 0 ? 1 : abs === 1 ? .83 : .68;
+      const opacity = visible ? (abs === 0 ? 1 : abs === 1 ? .78 : .32) : 0;
+
+      card.style.setProperty('--tx', `${tx}px`);
+      card.style.setProperty('--tz', `${tz}px`);
+      card.style.setProperty('--ry', `${ry}deg`);
+      card.style.setProperty('--scale', scale);
+      card.style.setProperty('--opacity', opacity);
+      card.style.setProperty('--z', 20 - abs);
+      card.classList.toggle('is-active', d === 0);
+      card.setAttribute('aria-hidden', d === 0 ? 'false' : 'true');
+      card.tabIndex = d === 0 ? 0 : -1;
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === active);
+      dot.setAttribute('aria-current', i === active ? 'true' : 'false');
+    });
+  }
+
+  function go(n) {
+    active = normalize(n);
+    render();
+  }
+
+  prev?.addEventListener('click', () => go(active - 1));
+  next?.addEventListener('click', () => go(active + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
+
+  stage.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+
+  stage.addEventListener('touchend', (e) => {
+    const diff = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(diff) > 45) go(active + (diff < 0 ? 1 : -1));
+  }, { passive: true });
+
+  document.addEventListener('keydown', (e) => {
+    if (!stage.closest('#featured-projects')) return;
+    if (e.key === 'ArrowLeft') go(active - 1);
+    if (e.key === 'ArrowRight') go(active + 1);
+  });
+
+  window.addEventListener('resize', render);
+  render();
+})();
+
+/* HOME hero: pointer-reactive silver light / subtle type movement */
+(() => {
+  const hero = document.querySelector('#hero.silver-lavender-hero');
+  if (!hero) return;
+  const name = hero.querySelector('.hero-name');
+  const copy = hero.querySelector('.hero-copy');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) return;
+
+  let raf = 0;
+  const reset = () => {
+    hero.style.setProperty('--hero-x', '50%');
+    hero.style.setProperty('--hero-y', '44%');
+    hero.style.setProperty('--hero-tilt-x', '0deg');
+    hero.style.setProperty('--hero-tilt-y', '0deg');
+    if (name) name.style.transform = 'translate3d(0,0,0)';
+  };
+
+  hero.addEventListener('pointermove', (event) => {
+    if (event.target.closest('.hero-portfolio-btn')) return;
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      const rect = hero.getBoundingClientRect();
+      const px = (event.clientX - rect.left) / rect.width;
+      const py = (event.clientY - rect.top) / rect.height;
+      const x = Math.max(0, Math.min(1, px));
+      const y = Math.max(0, Math.min(1, py));
+      hero.style.setProperty('--hero-x', `${(x * 100).toFixed(2)}%`);
+      hero.style.setProperty('--hero-y', `${(y * 100).toFixed(2)}%`);
+      if (name) {
+        name.style.transform = `translate3d(${((x - 0.5) * 4).toFixed(1)}px, ${((y - 0.5) * 2.5).toFixed(1)}px, 0)`;
+      }
+    });
+  }, { passive: true });
+
+  hero.addEventListener('pointerleave', reset, { passive: true });
 })();
